@@ -19,27 +19,26 @@ int[,] PrintArray (int row, int column)
 
 static void FindMinSum (int[,] array) 
 {   
-    int[] summy = new int[array.GetLength(1)];
+    int[] summary = new int[array.GetLength(1)];
     Console.WriteLine();
     
     for (int j = 0; j < array.GetLength(0); j++)
     {
-    int sum = 0;
+        int sum = 0;
         for (int i = 0; i < array.GetLength(1); i++)
         {
             sum += array[j, i];
         }
-    summy[j]=sum;
-    Console.Write($"{ sum} ");
-    
+        summary[j] = sum;
+        Console.Write($"{ sum} ");
     }
     
-    int min=summy[0];
+    int min = summary[0];
     int index = 0;
-    for(int i=0; i<array.GetLength(0);i++){
-        if (min>summy[i])
+    for(int i = 0; i < array.GetLength(0); i++){
+        if (min > summary[i])
                 {
-                    min=summy[i];
+                    min = summary[i];
                     index = i;
                 }
     }
